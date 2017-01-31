@@ -14,7 +14,14 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
 
-
+    //Blogger API Key
+    let BloggerAPIkey : String = "AIzaSyAZ8V4BrlZLLRzEuA8Mcmaq0WDivaL0vDI"
+    
+    //Link to Google's Blog (JSON Data)
+    //Since this is https, we don't need to edit the 'info.plist' file
+    let urlStr : String = "https://www.googleapis.com/blogger/v3/blogs/10861780/posts?key=\(BloggerAPIkey)"
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
